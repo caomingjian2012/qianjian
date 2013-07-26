@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.qianjian</groupId>
@@ -12,9 +12,66 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   
+		<struts2.version>2.0.11</struts2.version>
+		<spring.version>3.2.3.RELEASE</spring.version>
+		<hibernate.version>3.6.9.Final</hibernate.version>
+		<commons-dbcp.version>1.4</commons-dbcp.version>
+
+		<jackson.version>2.1.2</jackson.version>
+		<slf4j.version>1.7.2</slf4j.version>
+		<log4j.version>1.2.17</log4j.version>
+		<commons-lang3.version>3.1</commons-lang3.version>
+		<commons-io.version>2.4</commons-io.version>
+		<httpclient.version>4.2.2</httpclient.version>
+		<freemarker.version>2.3.19</freemarker.version>
+		<junit.version>4.11</junit.version>
+		<jetty.version>9.0.3.v20130506</jetty.version>
+		<jdk.version>1.6</jdk.version>
+	
   </properties>
 
   <dependencies>
-    
+    <dependency>
+  <groupId>jfinal</groupId>
+  <artifactId>jfinal</artifactId>
+  <version>1.4</version>
+</dependency>
+<dependency>
+  <groupId>org.eclipse.jetty</groupId>
+  <artifactId>jetty-server</artifactId>
+  <version>${jetty.version}</version>
+</dependency>
+<dependency>
+  <groupId>c3p0</groupId>
+  <artifactId>c3p0</artifactId>
+  <version>0.9.1.2</version>
+</dependency>
+<dependency>
+  <groupId>org.freemarker</groupId>
+  <artifactId>freemarker</artifactId>
+  <version>2.3.19</version>
+</dependency>
+<dependency>
+  <groupId>log4j</groupId>
+  <artifactId>log4j</artifactId>
+  <version>1.2.16</version>
+</dependency>
+<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+<dependency>
+  <groupId>mysql</groupId>
+  <artifactId>mysql-connector-java</artifactId>
+  <version>5.1.20</version>
+</dependency>
   </dependencies>
+  <modules>
+    <module>manager</module>
+    <module>common</module>
+    <module>web</module>
+  </modules>
 </project>
